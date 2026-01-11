@@ -1,0 +1,56 @@
+{
+  "gender": "male",
+  "name": {
+    "title": "Mr",
+    "first": "Abel",
+    "last": "Moreau"
+  },
+  "location": {
+    "street": {
+      "number": 3175,
+      "name": "Rue de L'Abbaye"
+    },
+    "city": "Dijon",
+    "state": "Lozère",
+    "country": "France",
+    "postcode": 64573,
+    "coordinates": {
+      "latitude": "-17.8145",
+      "longitude": "-49.4213"
+    },
+    "timezone": {
+      "offset": "+9:30",
+      "description": "Adelaide, Darwin"
+    }
+  },
+  "email": "abel.moreau@example.com",
+  "login": {
+    "uuid": "0be58599-1ead-44a8-a7fc-b1c6efba2ccc",
+    "username": "yellowsnake746",
+    "password": "hurrican",
+    "salt": "g3P1sOH5",
+    "md5": "760f82c5485e3299527e75cdeb0d14c3",
+    "sha1": "1340218702960d8407403ac12f3957d936296b7f",
+    "sha256": "4f3498eb9c6425e81ac855beba538e91060f6da8bb1c2fa9e79ad2a5b7b85cc8"
+  },
+  "dob": {
+    "date": "1948-11-07T19:06:14.176Z",
+    "age": 77
+  },
+  "registered": {
+    "date": "2018-01-19T14:14:21.336Z",
+    "age": 7
+  },
+  "phone": "05-97-61-88-76",
+  "cell": "06-81-99-94-51",
+  "id": {
+    "name": "INSEE",
+    "value": "1481069687565 37"
+  },
+  "picture": {
+    "large": "https://randomuser.me/api/portraits/men/42.jpg",
+    "medium": "https://randomuser.me/api/portraits/med/men/42.jpg",
+    "thumbnail": "https://randomuser.me/api/portraits/thumb/men/42.jpg"
+  },
+  "nat": "FR"
+}

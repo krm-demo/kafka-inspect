@@ -26,10 +26,7 @@
 		<tag/>
 		<url/>
 	</scm>
-	<properties>
-		<java.version>25</java.version>
-		<spring-cloud.version>2025.1.0</spring-cloud.version>
-	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -133,6 +130,58 @@
 			<artifactId>spring-boot-starter-webmvc-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<version>${org.junit.jupiter.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-params</artifactId>
+			<version>${org.junit.jupiter.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.platform</groupId>
+			<artifactId>junit-platform-launcher</artifactId>
+			<version>${org.junit.platform.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.platform</groupId>
+			<artifactId>junit-platform-reporting</artifactId>
+			<version>${org.junit.platform.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-junit-jupiter</artifactId>
+			<version>${org.mockito.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>io.github.krm-demo</groupId>
+			<artifactId>core-utils</artifactId>
+			<version>${io.github.krm-demo.core-utils.version}</version>
+		</dependency>
+
+		<!--
+			Following libraries must be automatically included - TODO: investigate it !!!
+		-->
+		<dependency>
+			<groupId>com.fasterxml.jackson.datatype</groupId>
+			<artifactId>jackson-datatype-jsr310</artifactId>
+			<version>${com.fasterxml.jackson.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>${commons-io.version}</version>
+		</dependency>
+
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
@@ -174,5 +223,21 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<properties>
+		<java.version>25</java.version>
+		<spring-cloud.version>2025.1.0</spring-cloud.version>
+
+		<io.github.krm-demo.core-utils.version>21.29.003</io.github.krm-demo.core-utils.version>
+
+		<org.junit.jupiter.version>6.0.2</org.junit.jupiter.version>
+		<org.junit.platform.version>6.0.2</org.junit.platform.version>
+		<org.mockito.version>5.21.0</org.mockito.version>
+
+		<!-- must be loaded with core-utils! - TODO: investigate !!! -->
+		<commons-io.version>2.20.0</commons-io.version>
+		<com.fasterxml.jackson.version>2.20.1</com.fasterxml.jackson.version>
+
+	</properties>
 
 </project>

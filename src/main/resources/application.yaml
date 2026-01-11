@@ -1,3 +1,10 @@
 spring:
   application:
     name: kafka-inspect
+
+app:
+  client:
+    factory:
+      random-users: JDK
+    endpoints:
+      random-users: "https://randomuser.me/api/"
