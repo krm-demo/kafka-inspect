@@ -1,0 +1,56 @@
+{
+  "gender": "male",
+  "name": {
+    "title": "Mr",
+    "first": "Adam",
+    "last": "Morris"
+  },
+  "location": {
+    "street": {
+      "number": 6533,
+      "name": "Tamaki Drive"
+    },
+    "city": "Tauranga",
+    "state": "Taranaki",
+    "country": "New Zealand",
+    "postcode": 24705,
+    "coordinates": {
+      "latitude": "54.4515",
+      "longitude": "-89.0823"
+    },
+    "timezone": {
+      "offset": "+8:00",
+      "description": "Beijing, Perth, Singapore, Hong Kong"
+    }
+  },
+  "email": "adam.morris@example.com",
+  "login": {
+    "uuid": "08dadcb2-8dc0-4ec9-8f2e-24422a02d168",
+    "username": "blacktiger217",
+    "password": "wwwwwwww",
+    "salt": "I2Wc6YKr",
+    "md5": "a84256cbce0b49fe27e8a1b803d84eb4",
+    "sha1": "b3b0eca0bf67783fe45cf467ca5cd35c57754c32",
+    "sha256": "d74ddd7047879b7da96db7568efa3dba5d40f7a3158bbcdc4e45665507736ea9"
+  },
+  "dob": {
+    "date": "1962-01-06T21:50:35.133Z",
+    "age": 64
+  },
+  "registered": {
+    "date": "2007-08-18T21:06:38.439Z",
+    "age": 18
+  },
+  "phone": "(160)-180-4508",
+  "cell": "(094)-038-1224",
+  "id": {
+    "name": "",
+    "value": null
+  },
+  "picture": {
+    "large": "https://randomuser.me/api/portraits/men/17.jpg",
+    "medium": "https://randomuser.me/api/portraits/med/men/17.jpg",
+    "thumbnail": "https://randomuser.me/api/portraits/thumb/men/17.jpg"
+  },
+  "nat": "NZ"
+}

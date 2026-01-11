@@ -1,0 +1,56 @@
+{
+  "gender": "female",
+  "name": {
+    "title": "Miss",
+    "first": "Oya",
+    "last": "Topaloğlu"
+  },
+  "location": {
+    "street": {
+      "number": 6055,
+      "name": "Talak Göktepe Cd"
+    },
+    "city": "Kayseri",
+    "state": "Antalya",
+    "country": "Turkey",
+    "postcode": 65290,
+    "coordinates": {
+      "latitude": "68.036",
+      "longitude": "154.1816"
+    },
+    "timezone": {
+      "offset": "+2:00",
+      "description": "Kaliningrad, South Africa"
+    }
+  },
+  "email": "oya.topaloglu@example.com",
+  "login": {
+    "uuid": "cc089471-927b-427d-80e2-19f0969a950a",
+    "username": "bluebutterfly641",
+    "password": "tootsie",
+    "salt": "lESkE1cd",
+    "md5": "1ec25f9b4d0bf4ad90f94b87eaaa1a0c",
+    "sha1": "58e1e3da0482092e986f357a489b58d5463a2c12",
+    "sha256": "e4e1c0ac14ffef99be854c723299b87ef7ff4029a2f8093b4b00c2aaf0f8f4e4"
+  },
+  "dob": {
+    "date": "1998-05-16T14:33:32.159Z",
+    "age": 27
+  },
+  "registered": {
+    "date": "2002-10-24T00:42:51.061Z",
+    "age": 23
+  },
+  "phone": "(356)-630-6671",
+  "cell": "(374)-518-8362",
+  "id": {
+    "name": "",
+    "value": null
+  },
+  "picture": {
+    "large": "https://randomuser.me/api/portraits/women/56.jpg",
+    "medium": "https://randomuser.me/api/portraits/med/women/56.jpg",
+    "thumbnail": "https://randomuser.me/api/portraits/thumb/women/56.jpg"
+  },
+  "nat": "TR"
+}
