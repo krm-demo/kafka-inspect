@@ -1,6 +1,6 @@
 package io.github.krmdemo.kafkainspect.config;
 
-import io.github.krmdemo.kafkainspect.client.HttpClientKind;
+import io.github.krmdemo.httpclient.HttpClientKind;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 

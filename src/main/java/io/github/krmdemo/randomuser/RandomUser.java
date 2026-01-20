@@ -2,7 +2,6 @@ package io.github.krmdemo.randomuser;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import lombok.Data;
 import org.apache.commons.lang3.StringUtils;
 
@@ -12,9 +11,9 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * The data-class represents all hierarchical properties of <b>Random-User</b>
+ * This data-class represents all hierarchical properties of <b>Random-User</b>
  *
- * @see  <a href="https://randomuser.me/api/">Random-User API</a>
+ * @see <a href="https://randomuser.me/api/">Random-User API</a>
  */
 @Data
 public class RandomUser {
@@ -29,23 +28,8 @@ public class RandomUser {
     @JsonProperty("phone") private String phoneNumber;
     @JsonProperty("cell") private String cellPhoneNum;
     NameValue id;
-    @JsonProperty("picture") PictureLinks pictureLnks;
+    @JsonProperty("picture") PictureLinks pictureLinks;
     @JsonProperty("nat") String nationality;
-
-    public enum Gender {
-        MALE("male"),
-        FEMALE("female");
-
-        private final String stringValue;
-        Gender(String stringValue) {
-            this.stringValue = stringValue;
-        }
-
-        @JsonValue
-        public String stringValue() {
-            return stringValue;
-        }
-    }
 
     public record Name(
         String title,

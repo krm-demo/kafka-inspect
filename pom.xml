@@ -169,9 +169,32 @@
 		</dependency>
 
 		<dependency>
+			<groupId>org.apache.httpcomponents.client5</groupId>
+			<artifactId>httpclient5</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents.client5</groupId>
+			<artifactId>httpclient5-fluent</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.squareup.okhttp3</groupId>
+			<artifactId>okhttp-jvm</artifactId>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
 			<groupId>io.github.krm-demo</groupId>
 			<artifactId>core-utils</artifactId>
 			<version>${io.github.krm-demo.core-utils.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.wiremock</groupId>
+			<artifactId>wiremock-jetty12</artifactId>
+			<version>${wiremock-jetty12.version}</version>
+			<scope>test</scope>
 		</dependency>
 
 		<!--
@@ -196,6 +219,20 @@
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
 				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-bom</artifactId>
+				<version>${jetty-bom.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.squareup.okhttp3</groupId>
+				<artifactId>okhttp-bom</artifactId>
+				<version>${okhttp.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -235,12 +272,17 @@
 		<java.version>25</java.version>
 		<spring-cloud.version>2025.1.0</spring-cloud.version>
 
+		<httpclient5.version>5.6</httpclient5.version>
+		<okhttp.version>5.3.2</okhttp.version>
+
 		<io.github.krm-demo.core-utils.version>21.29.003</io.github.krm-demo.core-utils.version>
 
 		<org.junit.jupiter.version>6.0.2</org.junit.jupiter.version>
 		<org.junit.platform.version>6.0.2</org.junit.platform.version>
 		<org.mockito.version>5.21.0</org.mockito.version>
 		<json-unit-assertj.version>5.1.0</json-unit-assertj.version>
+		<wiremock-jetty12.version>3.13.2</wiremock-jetty12.version>
+		<jetty-bom.version>12.0.30</jetty-bom.version>
 
 		<!-- must be loaded with core-utils! - TODO: investigate !!! -->
 		<commons-io.version>2.20.0</commons-io.version>

@@ -1,6 +1,11 @@
 package io.github.krmdemo.kafkainspect.client;
 
+import io.github.krmdemo.httpclient.HttpClientKind;
+import io.github.krmdemo.randomuser.RandomUser;
+
 public interface RandomUsersClient {
+
+    RandomUser getRandomUser();
 
     static Factory kind(HttpClientKind kind) {
         return null; //new Factory(kind);

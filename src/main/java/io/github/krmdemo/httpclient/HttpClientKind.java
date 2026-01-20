@@ -1,4 +1,4 @@
-package io.github.krmdemo.kafkainspect.client;
+package io.github.krmdemo.httpclient;
 
 /**
  * This enumeration represents a non-mutable kind of HTTP-Client implementation,
