@@ -26,10 +26,10 @@ public class HttpParamsClientOkHttp implements HttpParamsClient {
         .build();
 
     /**
-     * Package-private constructor forces to use {@link HttpParamsClient.Factory}
+     * Package-private constructor forces to use {@link HttpFactory}
      * @param httpFactory a factory with initializing parameters
      */
-    HttpParamsClientOkHttp(Factory httpFactory) {
+    HttpParamsClientOkHttp(HttpFactory httpFactory) {
         this.baseUrl = HttpUrl.parse(httpFactory.baseUrl());
         if (this.baseUrl == null) {
             throw new IllegalArgumentException(String.format(

@@ -6,12 +6,12 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-public class RandomUsersResponse {
+public class RandomUsersResult {
 
     @JsonProperty("results") private List<RandomUser> randomUsers;
-    @JsonProperty("info")ResponseInfo responseInfo;
+    @JsonProperty("info") Info info;
 
-    record ResponseInfo(
+    record Info(
         String seed,
         @JsonProperty("results") int resultsCount,
         @JsonProperty("page")int pageNumber,

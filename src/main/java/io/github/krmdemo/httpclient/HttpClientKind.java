@@ -10,13 +10,5 @@ public enum HttpClientKind {
 
     APACHE_HTTP,
 
-    OK_HTTP,
-
-    OPEN_FEIGN,
-
-    REST_TEMPLATE,
-
-    REST_CLIENT,
-
-    SPRING_FEIGN
+    OK_HTTP
 }

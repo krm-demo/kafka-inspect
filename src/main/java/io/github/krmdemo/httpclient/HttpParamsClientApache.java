@@ -25,7 +25,7 @@ public class HttpParamsClientApache implements HttpParamsClient, AutoCloseable {
     private final String baseUrl;
     private final CloseableHttpClient httpclient = HttpClients.createDefault();
 
-    HttpParamsClientApache(Factory httpFactory) {
+    HttpParamsClientApache(HttpFactory httpFactory) {
         this.baseUrl = httpFactory.baseUrl();
     }
 

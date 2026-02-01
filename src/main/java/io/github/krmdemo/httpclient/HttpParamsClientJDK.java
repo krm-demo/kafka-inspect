@@ -16,7 +16,7 @@ public class HttpParamsClientJDK implements HttpParamsClient {
     private final String baseUrl;
     private final HttpClient httpClient = HttpClient.newBuilder().build();
 
-    HttpParamsClientJDK(HttpParamsClient.Factory httpFactory) {
+    HttpParamsClientJDK(HttpFactory httpFactory) {
         this.baseUrl = httpFactory.baseUrl();
     }
 

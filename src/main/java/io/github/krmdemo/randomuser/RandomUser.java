@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import org.apache.commons.lang3.StringUtils;
+import org.krmdemo.techlabs.core.dump.DumpUtils;
 
 import java.time.Instant;
 import java.util.UUID;
@@ -30,6 +31,11 @@ public class RandomUser {
     NameValue id;
     @JsonProperty("picture") PictureLinks pictureLinks;
     @JsonProperty("nat") String nationality;
+
+    @Override
+    public String toString() {
+        return DumpUtils.dumpAsJsonTxt(this);
+    }
 
     public record Name(
         String title,

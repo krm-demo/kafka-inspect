@@ -1,5 +1,9 @@
 package io.github.krmdemo.httpclient;
 
+import lombok.Getter;
+import lombok.Setter;
+import lombok.experimental.Accessors;
+
 import java.time.Duration;
 import java.util.Map;
 import java.util.function.Function;
@@ -24,27 +28,28 @@ public interface HttpParamsClient {
 
     String httpGetBodyString(Map<String, String> paramsMap);
 
-    static Factory httpKind(HttpClientKind kind) {
+    /**
+     * Creator (factory-method) for {@link HttpFactory}
+     *
+     * @param kind a kind of low-level HTTP-client
+     * @return an instance of {@link HttpFactory} according to {@code kind}
+     */
+    static HttpFactory httpKind(HttpClientKind kind) {
         return switch(kind) {
-            case JDK -> new Factory(HttpParamsClientJDK::new);
-            case APACHE_HTTP -> new Factory(HttpParamsClientApache::new);
-            case OK_HTTP -> new Factory(HttpParamsClientOkHttp::new);
-            default -> throw new IllegalArgumentException("Unsupported HttpKind: " + kind);
+            case JDK -> new HttpFactory(HttpParamsClientJDK::new);
+            case APACHE_HTTP -> new HttpFactory(HttpParamsClientApache::new);
+            case OK_HTTP -> new HttpFactory(HttpParamsClientOkHttp::new);
         };
     }
 
-    class Factory {
-        private final Function<Factory, HttpParamsClient> createFn;
+    @Getter
+    @Setter
+    @Accessors(fluent = true, chain = true)
+    public class HttpFactory {
+        private final Function<HttpFactory, HttpParamsClient> createFn;
         private String baseUrl;
-        private Factory(Function<Factory, HttpParamsClient> createFn) {
+        private HttpFactory(Function<HttpFactory, HttpParamsClient> createFn) {
             this.createFn = createFn;
-        }
-        public String baseUrl() {
-            return baseUrl;
-        }
-        public Factory baseUrl(String baseUrl) {
-            this.baseUrl = baseUrl;
-            return this;
         }
         public HttpParamsClient create() {
             return createFn.apply(this);
