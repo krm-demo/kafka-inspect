@@ -1,0 +1,66 @@
+{
+  "results": [
+    {
+      "gender": "female",
+      "name": {
+        "title": "Ms",
+        "first": "Davita",
+        "last": "Hebels"
+      },
+      "location": {
+        "street": {
+          "number": 8714,
+          "name": "Eikenhorst"
+        },
+        "city": "Bunschoten-Spakenburg",
+        "state": "Friesland",
+        "country": "Netherlands",
+        "postcode": "3937 HL",
+        "coordinates": {
+          "latitude": "36.1030",
+          "longitude": "99.0109"
+        },
+        "timezone": {
+          "offset": "0:00",
+          "description": "Western Europe Time, London, Lisbon, Casablanca"
+        }
+      },
+      "email": "davita.hebels@example.com",
+      "login": {
+        "uuid": "34e7d723-97b6-4ba7-bc9d-5ac024d50b20",
+        "username": "ticklishfrog714",
+        "password": "moreno",
+        "salt": "ETySQE9X",
+        "md5": "e0306cc7f806addafde9736c8962e1bf",
+        "sha1": "961f8ddf745ee7f3e25ee8d662ad9f33f0976a19",
+        "sha256": "8ffd8005a59427fe207dfbc5c6cbdcd6da4f48deb200dd004e9a47a5031b759a"
+      },
+      "dob": {
+        "date": "1989-01-20T20:24:15.472Z",
+        "age": 37
+      },
+      "registered": {
+        "date": "2002-08-28T17:00:19.673Z",
+        "age": 23
+      },
+      "phone": "(0298) 240585",
+      "cell": "(06) 42902365",
+      "id": {
+        "name": "BSN",
+        "value": "19615922"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/14.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/14.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/14.jpg"
+      },
+      "nat": "NL"
+    }
+  ],
+  "info": {
+    "seed": "c4fb505fa8bf8b7d",
+    "results": 1,
+    "page": 1,
+    "version": "1.4"
+  }
+}

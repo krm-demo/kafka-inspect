@@ -1,0 +1,66 @@
+{
+  "results": [
+    {
+      "gender": "female",
+      "name": {
+        "title": "Miss",
+        "first": "Gabrielle",
+        "last": "Smith"
+      },
+      "location": {
+        "street": {
+          "number": 1487,
+          "name": "Richmond Ave"
+        },
+        "city": "Grand Falls",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "K6K 7C8",
+        "coordinates": {
+          "latitude": "-64.8282",
+          "longitude": "99.8747"
+        },
+        "timezone": {
+          "offset": "+11:00",
+          "description": "Magadan, Solomon Islands, New Caledonia"
+        }
+      },
+      "email": "gabrielle.smith@example.com",
+      "login": {
+        "uuid": "7d3f2c6c-3a1a-4785-86bd-da2993eae41c",
+        "username": "ticklishsnake713",
+        "password": "remote",
+        "salt": "OfPEHuVy",
+        "md5": "977be98b5af97a5214dd348e0e38c10e",
+        "sha1": "05a12026014e78f3316391cdbad9b827d4f939dc",
+        "sha256": "77e9bfc3dc64169d2498722cc86446038cdf6e4d5b0539aaff23178647a4f04e"
+      },
+      "dob": {
+        "date": "1954-08-02T01:23:08.122Z",
+        "age": 71
+      },
+      "registered": {
+        "date": "2014-06-18T21:39:48.820Z",
+        "age": 11
+      },
+      "phone": "F86 X20-7120",
+      "cell": "F23 Q17-6904",
+      "id": {
+        "name": "SIN",
+        "value": "246847321"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/60.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/60.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/60.jpg"
+      },
+      "nat": "CA"
+    }
+  ],
+  "info": {
+    "seed": "777b28a517f97991",
+    "results": 1,
+    "page": 1,
+    "version": "1.4"
+  }
+}

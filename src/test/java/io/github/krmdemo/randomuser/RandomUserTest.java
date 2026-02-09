@@ -1,6 +1,5 @@
 package io.github.krmdemo.randomuser;
 
-import org.json.JSONException;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -12,7 +11,7 @@ import static net.javacrumbs.jsonunit.assertj.JsonAssertions.assertThatJson;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * This unit-test verifies serialization and de-serialization abilities of data-class {@link RandomUser}
+ * This unit-test verifies serialization and de-serialization abilities of REST-data-class {@link RandomUser}
  *
  * @see <a href="https://github.com/lukas-krecan/JsonUnit">json-unit-assertj</a>
  */
@@ -24,7 +23,7 @@ public class RandomUserTest {
         "unit-tests/sample-user--Dya-XXX.json",      // <-- seed: "00fdd9bf0ac99b24"
         "unit-tests/sample-user--Adam-Morris.json"   // <-- seed: "215b765ce74a2f9e"
     })
-    void testWholeJSON(String resourcePath) throws JSONException {
+    void testWholeJSON(String resourcePath) {
         String originalJson = CoreResourceUtils.resourceAsText(resourcePath);
         RandomUser randomUser = JacksonUtils.jsonValueFromResource(resourcePath, RandomUser.class);
         String dumpedJson = DumpUtils.dumpAsJsonTxt(randomUser);
@@ -52,7 +51,7 @@ public class RandomUserTest {
         "unit-tests/sample-user--Dya-XXX.json, 'Miss Oya Topaloğlu', 27, 65290, 6055, 23",
         "unit-tests/sample-user--Adam-Morris.json, 'Mr Adam Morris', 64, 24705, 6533, 18"
     })
-    void testSomeProps(String resourcePath, String fullName, int ageBirth, int postcode, int streetNum, int ageReg) {
+    void testSomeProps(String resourcePath, String fullName, int ageBirth, String postcode, int streetNum, int ageReg) {
         RandomUser randomUser = JacksonUtils.jsonValueFromResource(resourcePath, RandomUser.class);
         assertThat(randomUser.getName().full()).isEqualTo(fullName);
         assertThat(randomUser.getDateOfBirth().age()).isEqualTo(ageBirth);

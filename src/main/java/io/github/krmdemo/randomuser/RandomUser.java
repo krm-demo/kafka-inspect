@@ -6,6 +6,7 @@ import lombok.Data;
 import org.apache.commons.lang3.StringUtils;
 import org.krmdemo.techlabs.core.dump.DumpUtils;
 
+import java.math.BigDecimal;
 import java.time.Instant;
 import java.util.UUID;
 import java.util.stream.Collectors;
@@ -54,7 +55,7 @@ public class RandomUser {
         String city,
         String country,
         String state,
-        Integer postcode,
+        String postcode,
         GeoCoordinates coordinates,
         TimeZone timezone
     ) {}
@@ -65,8 +66,9 @@ public class RandomUser {
     ) {}
 
     public record GeoCoordinates(
-        Double latitude,  // TODO: try to address trailing zero using << pattern = "#.####" >>
-        Double longitude
+        // Note! that using BigDecimal with string-shape keeps the trailing zeros
+        @JsonFormat(shape = JsonFormat.Shape.STRING) BigDecimal latitude,
+        @JsonFormat(shape = JsonFormat.Shape.STRING) BigDecimal longitude
     ) {}
 
     public record TimeZone(

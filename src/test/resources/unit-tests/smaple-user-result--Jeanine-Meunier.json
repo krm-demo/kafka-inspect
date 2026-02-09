@@ -1,0 +1,66 @@
+{
+  "results": [
+    {
+      "gender": "female",
+      "name": {
+        "title": "Madame",
+        "first": "Jeanine",
+        "last": "Meunier"
+      },
+      "location": {
+        "street": {
+          "number": 2216,
+          "name": "Rue Laure-Diebold"
+        },
+        "city": "Escholzmatt-Marbach",
+        "state": "Valais",
+        "country": "Switzerland",
+        "postcode": 7044,
+        "coordinates": {
+          "latitude": "-60.7658",
+          "longitude": "120.5094"
+        },
+        "timezone": {
+          "offset": "+1:00",
+          "description": "Brussels, Copenhagen, Madrid, Paris"
+        }
+      },
+      "email": "jeanine.meunier@example.com",
+      "login": {
+        "uuid": "7a973e4d-506b-49ae-adfb-45fe6fa510f4",
+        "username": "silverelephant390",
+        "password": "visitor",
+        "salt": "axTJN6yY",
+        "md5": "7c30aad9e8b90c3e598734c16fba43cb",
+        "sha1": "3ce0efd713c58e201ca92002085aacacf69c8d52",
+        "sha256": "6aaa305e530cab231f37c31df8f6b7bb2331bb360db5cb9a9b71b5aa983e66c7"
+      },
+      "dob": {
+        "date": "2000-01-08T06:33:20.787Z",
+        "age": 26
+      },
+      "registered": {
+        "date": "2020-10-03T04:25:58.999Z",
+        "age": 5
+      },
+      "phone": "076 009 22 60",
+      "cell": "079 867 59 04",
+      "id": {
+        "name": "AVS",
+        "value": "756.8246.5346.25"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/39.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/39.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/39.jpg"
+      },
+      "nat": "CH"
+    }
+  ],
+  "info": {
+    "seed": "10c39e3613af2e6c",
+    "results": 1,
+    "page": 1,
+    "version": "1.4"
+  }
+}

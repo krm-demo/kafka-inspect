@@ -179,6 +179,12 @@
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
+			<groupId>org.apache.httpcomponents.core5</groupId>
+			<artifactId>httpcore5</artifactId>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
 			<groupId>com.squareup.okhttp3</groupId>
 			<artifactId>okhttp-jvm</artifactId>
 			<scope>compile</scope>
@@ -273,6 +279,7 @@
 		<spring-cloud.version>2025.1.0</spring-cloud.version>
 
 		<httpclient5.version>5.6</httpclient5.version>
+		<httpcore5.version>5.4</httpcore5.version>
 		<okhttp.version>5.3.2</okhttp.version>
 
 		<io.github.krm-demo.core-utils.version>21.29.003</io.github.krm-demo.core-utils.version>

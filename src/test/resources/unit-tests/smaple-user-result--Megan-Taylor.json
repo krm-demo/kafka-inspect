@@ -1,0 +1,66 @@
+{
+  "results": [
+    {
+      "gender": "female",
+      "name": {
+        "title": "Ms",
+        "first": "Megan",
+        "last": "Taylor"
+      },
+      "location": {
+        "street": {
+          "number": 2145,
+          "name": "Argyle St"
+        },
+        "city": "Killarney",
+        "state": "Yukon",
+        "country": "Canada",
+        "postcode": "C6C 3Z6",
+        "coordinates": {
+          "latitude": "-67.4556",
+          "longitude": "21.8853"
+        },
+        "timezone": {
+          "offset": "+9:00",
+          "description": "Tokyo, Seoul, Osaka, Sapporo, Yakutsk"
+        }
+      },
+      "email": "megan.taylor@example.com",
+      "login": {
+        "uuid": "dece327f-0303-4301-8c66-0ef162c90a8c",
+        "username": "happybird938",
+        "password": "hemlock",
+        "salt": "ncnlafXY",
+        "md5": "85bf77caf6ea0a1790de2dee19313afe",
+        "sha1": "f61d0f20bb9d31a6ffb7fd16d29dd262336ee820",
+        "sha256": "f0e15249e291511a2f3c1ab50357e8f7ee5071a640fc0fdabedfcf1e58df8193"
+      },
+      "dob": {
+        "date": "1999-01-05T10:14:43.200Z",
+        "age": 27
+      },
+      "registered": {
+        "date": "2004-05-28T19:55:32.422Z",
+        "age": 21
+      },
+      "phone": "D75 B65-7171",
+      "cell": "V90 U53-6727",
+      "id": {
+        "name": "SIN",
+        "value": "583909536"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/41.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/41.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/41.jpg"
+      },
+      "nat": "CA"
+    }
+  ],
+  "info": {
+    "seed": "e407474e14a9e675",
+    "results": 1,
+    "page": 1,
+    "version": "1.4"
+  }
+}
