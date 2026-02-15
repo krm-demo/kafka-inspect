@@ -2,6 +2,7 @@ package io.github.krmdemo.randomuser;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
+import org.krmdemo.techlabs.core.dump.DumpUtils;
 
 import java.util.List;
 import java.util.Map;
@@ -36,6 +37,11 @@ public class Country {
     private List<Currency> currencies;
     private List<Language> languages;
     private Map<String, String> translations;
+
+    @Override
+    public String toString() {
+        return DumpUtils.dumpAsJsonTxt(this);
+    }
 
     public record Currency(
         String code,

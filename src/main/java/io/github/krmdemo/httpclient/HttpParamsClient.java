@@ -26,7 +26,28 @@ public interface HttpParamsClient {
      */
     String HTTP_HEADER_NAME__KIND = "X-Http-Params-Client-Kind";
 
-    String httpGetBodyString(Map<String, String> paramsMap);
+    /**
+     * Getting the HTTP-response body for executed HTTP-request of HTTP-method {@code GET}.
+     * The URL of HTTP-request to execute corresponds to {@link HttpFactory#baseUrl(String) base url},
+     * which is appending with {@code apiPath} and map of URL-parameters {@code paramsMap}.
+     *
+     * @param apiPath an API-path that will be appended to {@link HttpFactory#baseUrl(String) base url}
+     * @param paramsMap a map with URL-parameter's names as {@link Map.Entry#getKey() key}
+     *                  and URL-parameter's values as {@link Map.Entry#getValue() value}
+     * @return the body of HTTP-response as {@link String}
+     */
+    String httpGetBodyString(String apiPath, Map<String, String> paramsMap);
+
+    /**
+     * The same as {@link #httpGetBodyString(String, Map)}, but with <b>empty</b> API-path
+     *
+     * @param paramsMap a map with URL-parameter's names as {@link Map.Entry#getKey() key}
+     *                  and URL-parameter's values as {@link Map.Entry#getValue() value}
+     * @return the body of HTTP-response as {@link String}
+     */
+    default String httpGetBodyString(Map<String, String> paramsMap) {
+        return httpGetBodyString("", paramsMap);
+    }
 
     /**
      * Creator (factory-method) for {@link HttpFactory}
@@ -45,7 +66,7 @@ public interface HttpParamsClient {
     @Getter
     @Setter
     @Accessors(fluent = true, chain = true)
-    public class HttpFactory {
+    class HttpFactory {
         private final Function<HttpFactory, HttpParamsClient> createFn;
         private String baseUrl;
         private HttpFactory(Function<HttpFactory, HttpParamsClient> createFn) {

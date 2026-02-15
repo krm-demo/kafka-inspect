@@ -6,7 +6,7 @@ import lombok.Data;
 import java.util.List;
 
 /**
- * This class represents REST-data-object represents the whole HTTP-response
+ * This class represents REST-data-object that corresponds to the whole HTTP-response
  * from <a href="https://randomuser.me/api/">Random-User API</a>, which in addition to
  * the list if {@link io.github.krmdemo.randomuser.RandomUser} contains the
  * {@link RandomUsersResult.Info information} about paging and random-seed.

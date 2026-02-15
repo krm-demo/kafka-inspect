@@ -8,10 +8,24 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
 
+/**
+ * This interface represents a REST-API to {@value BASE_API_URL__RANDOM_USERS}.
+ *
+ * @see <a href="https://randomuser.me/api/">Random-User API</a>
+ */
 public interface RandomUsersClient {
 
+    /**
+     * Base (root) URL of <a href="https://randomuser.me/api/">Random-User API</a>
+     */
     String BASE_API_URL__RANDOM_USERS = "https://randomuser.me/api/";
 
+    /**
+     * Getting the single random-user for the random (unpredictable) seed.
+     *
+     * @return a random-user as {@link RandomUser}
+     * @throws IllegalStateException if no random-users were retuned
+     */
     default RandomUser getRandomUser() {
         RandomUsersResult result = getRandomUsersResult();
         return result.getRandomUsers().stream().findFirst().orElseThrow(
@@ -19,6 +33,13 @@ public interface RandomUsersClient {
         );
     }
 
+    /**
+     * Getting the single random-user result for the random (unpredictable) seed,
+     * where the property {@link RandomUsersResult#getRandomUsers() randomUsers}
+     * is the list of one {@link RandomUser} element.
+     *
+     * @return a random-user with additional information as {@link RandomUsersResult}
+     */
     RandomUsersResult getRandomUsersResult();
 
     /**

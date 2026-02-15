@@ -8,6 +8,10 @@ import org.junit.jupiter.params.provider.EnumSource;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * This is a <b>live-test</b> to multiple implementations of {@link RandomUsersClient},
+ * which performs a remote HTTP-calls to real REST-API.
+ */
 @Slf4j
 public class RandomUsersClientTest {
 

@@ -21,8 +21,8 @@ public class HttpParamsClientJDK implements HttpParamsClient {
     }
 
     @Override
-    public String httpGetBodyString(Map<String, String> paramsMap) {
-        URI uri = URI.create(baseUrl + urlParams(paramsMap));
+    public String httpGetBodyString(String apiPath, Map<String, String> paramsMap) {
+        URI uri = URI.create(baseUrl + apiPath + urlParams(paramsMap));
         HttpRequest request = HttpRequest.newBuilder()
             .GET()
             .timeout(HTTP_TIMEOUT)

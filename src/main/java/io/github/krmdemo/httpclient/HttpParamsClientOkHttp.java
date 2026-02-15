@@ -6,6 +6,7 @@ import okhttp3.OkHttp;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import org.apache.commons.lang3.StringUtils;
 
 import java.io.IOException;
 import java.util.Map;
@@ -38,8 +39,11 @@ public class HttpParamsClientOkHttp implements HttpParamsClient {
     }
 
     @Override
-    public String httpGetBodyString(Map<String, String> paramsMap) {
+    public String httpGetBodyString(String apiPath, Map<String, String> paramsMap) {
         HttpUrl.Builder urlBuilder = baseUrl.newBuilder();
+        if (StringUtils.isNotBlank(apiPath)) {
+            urlBuilder.addPathSegments(apiPath);
+        }
         paramsMap.forEach(urlBuilder::addQueryParameter);
         HttpUrl httpUrl = urlBuilder.build();
 

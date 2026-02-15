@@ -30,8 +30,8 @@ public class HttpParamsClientApache implements HttpParamsClient, AutoCloseable {
     }
 
     @Override
-    public String httpGetBodyString(Map<String, String> paramsMap) {
-        HttpGet httpGet = httpGetParams(paramsMap);
+    public String httpGetBodyString(String apiPath, Map<String, String> paramsMap) {
+        HttpGet httpGet = httpGetParams(apiPath, paramsMap);
         httpGet.addHeader(HTTP_HEADER_NAME__KIND, HttpClientKind.APACHE_HTTP);
         httpGet.addHeader(HTTP_HEADER_NAME__VERSION, versionInfo.getRelease() + " (classic)");
         httpGet.setConfig(requestConfig);
@@ -50,15 +50,15 @@ public class HttpParamsClientApache implements HttpParamsClient, AutoCloseable {
         }
     }
 
-    private HttpGet httpGetParams(Map<String, String> paramsMap) {
+    private HttpGet httpGetParams(String apiPath, Map<String, String> paramsMap) {
         try {
-            URIBuilder uriBuilder = new URIBuilder(baseUrl);
+            URIBuilder uriBuilder = new URIBuilder(baseUrl + apiPath);
             paramsMap.forEach(uriBuilder::addParameter);
             return new HttpGet(uriBuilder.build());
         } catch (URISyntaxException uriEx) {
             throw new IllegalArgumentException(String.format(
-                "Failed to create HttpGet for basUrl(%s) and params --> %s",
-                baseUrl, paramsMap), uriEx);
+                "Failed to create HttpGet for basUrl(%s), apiPath('%s') and params --> %s",
+                baseUrl, apiPath, paramsMap), uriEx);
         }
     }
 
