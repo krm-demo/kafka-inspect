@@ -1,5 +1,7 @@
 package io.github.krmdemo.httpclient;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.io.IOException;
 import java.net.URI;
 import java.net.URLEncoder;
@@ -52,8 +54,9 @@ public class HttpParamsClientJDK implements HttpParamsClient {
     }
 
     public static String urlParams(Stream<Map.Entry<String, String>> params) {
-        return "?" + params.map(HttpParamsClientJDK::urlEncode)
+        String paramsJoined = params.map(HttpParamsClientJDK::urlEncode)
             .collect(Collectors.joining("&"));
+        return StringUtils.isBlank(paramsJoined) ? "" : "?" + paramsJoined;
     }
 
     public static String urlEncode(Map.Entry<String, String> paramPair) {

@@ -57,8 +57,8 @@ public class HttpParamsClientOkHttp implements HttpParamsClient {
             try (Response response = call.execute()) {
                 if (!response.isSuccessful()) {
                     throw new IllegalStateException(String.format(
-                        "Http request is failed with code %d(%s)",
-                        response.code(), response.message()));
+                        "Unexpected HTTP-Status(%d) in HTTP-Response from HttpUrl(%s) - %s",
+                        response.code(), httpUrl, response.message()));
                 }
                 return response.body().string();
             }

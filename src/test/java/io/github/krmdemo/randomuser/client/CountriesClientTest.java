@@ -9,6 +9,8 @@ import org.junit.jupiter.params.provider.EnumSource;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatIllegalStateException;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 /**
  * This is a <b>live-test</b> to multiple implementations of {@link RandomUsersClient},
@@ -38,7 +40,7 @@ public class CountriesClientTest {
         "APACHE_HTTP",
         "OK_HTTP"
     })
-    void testGetByAlpha(HttpClientKind httpClientKind) {
+    void testGetByAlpha_USA(HttpClientKind httpClientKind) {
         CountriesClient client = CountriesClient.kind(httpClientKind).create();
         Country countryUSA = client.getByAlpha("USA");
         log.info("{}: countryUSA --> {}", httpClientKind, countryUSA);
@@ -51,5 +53,20 @@ public class CountriesClientTest {
                 "United States of America",
                 "Americas",
                 "Washington, D.C.");
+    }
+
+    @ParameterizedTest
+    @EnumSource(names = {
+        "JDK",
+        "APACHE_HTTP",
+        "OK_HTTP"
+    })
+    void testGetByAlpha_Unknown(HttpClientKind httpClientKind) {
+        CountriesClient client = CountriesClient.kind(httpClientKind).create();
+        assertThatThrownBy(
+            () -> client.getByAlpha("la-la-la")
+        ).isInstanceOf(IllegalStateException.class)
+            .hasMessageContaining("alpha/la-la-la")
+            .hasMessageContaining("HTTP-Status(404)");
     }
 }

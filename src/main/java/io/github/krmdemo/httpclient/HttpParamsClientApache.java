@@ -39,7 +39,8 @@ public class HttpParamsClientApache implements HttpParamsClient, AutoCloseable {
             return httpclient.execute(httpGet, response -> {
                 if (response.getCode() != 200) {
                     throw new IllegalStateException(String.format(
-                        "HttpGet request is failed with code %d", response.getCode()));
+                        "Unexpected HTTP-Status(%d) in HTTP-Response from HttpGet(%s)",
+                        response.getCode(), httpGet));
                 }
                 HttpEntity httpEntity = response.getEntity();
                 return EntityUtils.toString(httpEntity);
